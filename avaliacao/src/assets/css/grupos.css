@@ -1,0 +1,93 @@
+button::-moz-focus-inner { border:0; padding:0;}
+.no-game-selected { background: #e7e7e7; height:400px; margin-bottom:15px}
+.no-game-selected p { font-size: 18px; font-family: Georgia, "Times New Roman", Times, serif; line-height:265px; text-align: center}
+#grupos-left-column { float: left; width: 235px}
+#grupos-list-filtros { max-height:150px; overflow:auto}
+#grupos-list-filtros div{ padding:4px 0; border-bottom:1px solid #CCC; width:90%}
+#grupos-list-filtros div label:hover { text-decoration: underline; cursor:pointer}
+#grupos-list-filtros { padding-bottom:15px}
+input.btn[disabled],input.btn:hover[disabled] { background:#bfd9e5}
+input.btn:hover { background:#0099cc}
+.list-dezenas-filtro , .list-dezenas-gerador { width: 320px;}
+.list-dezenas-filtro button, .list-dezenas-gerador button  { background: #138ecc; color:#fff; float: left; padding:7px; border-radius: 5px; margin:0 2px 2px; cursor: pointer}
+.list-dezenas-filtro button.selected , .list-dezenas-filtro button.selected:hover ,.list-dezenas-gerador button.selected, .list-dezenas-gerador button:hover   { background:#669900}
+.list-dezenas-filtro button:hover, .list-dezenas-gerador button:hover  { background:#09c}
+#grupos-left-filtro-box{ width: 285px; float: left; border-right:1px solid #ccc; padding-right:45px; padding-left:15px}
+.filtro-txt span { border:1px solid #CCC; padding:3px; border-radius: 4px; margin-bottom:5px; }
+.slider-filtro {margin-left:7px}
+form input.btn { background: #138ecc}
+#grupos-right-filtro-box { float: right; width: 390px;}
+.descricao-filtro-editor { width: 330px}
+#list-filtro-editor label { margin:0}
+.sub-filtro-editor { padding:15px 0 0}
+.default-height-filtro { height:550px}
+.list-filtros-scroll { overflow:auto; max-height:530px}
+.row { height:20px; margin-bottom:0;    padding: 10px 0 10px 5px;}
+#list-combinacoes { border:1px solid #ccc; border-radius: 4px; max-height:200px; padding:5px; overflow: auto}
+#list-combinacoes .row .col { width: 100%;}
+#list-combinacoes .row { margin-bottom:0; line-height:30px; height:30px; padding:5px 0 5px 2px}
+.list-comb-lotomania div.row { height:35px !important; line-height: normal !important;}
+#list-combinacoes .row .col { padding-left:4px}
+#list-combinacoes div.col { font-size:11px;}
+#list-combinacoes div.selected-grupo { background:#138ccc;  }
+#list-combinacoes div.selected-grupo div { color:#fff}
+.slider-range {
+    border: 1px solid #999999;
+    border-radius: 4px 4px 4px 4px;
+    display: block;
+    float: left;
+    margin-right: 20px;
+    padding: 5px;
+    width: 150px;
+}
+.edit-mode { background: #f8f8f8}
+.graphic-opts { margin-bottom: 15px;}	
+.change-graphic { background: #ed7e23;  border-radius: 6px 6px 6px 6px;
+    display: block;
+    float: right;
+    padding: 5px;
+	margin-left:7px}
+.change-graphic:hover , .selected-option{ background: #b9631c}	
+.no-padding-left { padding-left:0 !important; min-height:270px; width:350px !important}
+.reduced-wid { width: 280px !important}
+.selected-numbers-simu { width:75%}
+.selected-numbers-simu ,.selected-numbers-simu span{ font-size: 30px; font-family: Georgia, "Times New Roman", Times, serif; text-align: center}
+.selected-numbers-simu span { font-size: 60px; display: block}
+.no-border { border:none !important; font-size: 24px !important;}
+.list-faixa-premio { 
+	float: left;
+	border:1px solid #666;
+	border-radius: 4px; padding:4px; width:20%; 
+	margin:0 8px 5px 0}
+.list-faixa-premio p span { font-size: 24px; font-family: Georgia, "Times New Roman", Times, serif; display: block}
+.list-faixa-premio p  { text-align: center}
+.list-faixa-premio:hover { background: #e5f4fb; cursor:pointer }
+.faixa-selecionada { background: #138ecc; border: 1px solid #116f9e}
+.faixa-selecionada:hover { background:#138ccc; border: 1px solid #116f9e}
+.faixa-selecionada  p, .faixa-selecionada p span { color: #fff}
+.ajax-list-faixas-simulacao-pesquisa { max-height:250px; overflow: auto; width: 690px;}
+.head-stats { background: #f1faff; color: #999;  display: table-row; width: 100%; }
+.col-stat { display: table-cell; padding:5px 0;}
+.n_concurso { width: 88px; text-indent: 10px}
+.n_dezenas { width: 410px}
+.n_stat { width: 193px}
+.row-stat {
+    border-bottom: 1px solid #CCCCCC;
+	border-bottom: 1px solid #CCCCCC;
+    height: 25px;
+}
+.faixa-dupla-sena {border-radius: 4px 4px 4px 4px;
+    height: 42px;
+    padding: 10px 4px;
+    vertical-align: middle;
+    width: 160px;}
+.load-guide {
+    background: none repeat scroll 0 0 #FF6633;
+    border-radius: 4px 4px 4px 4px;
+    color: #FFFFFF;
+    font-size: 14px;
+    margin-top: 20px;
+    padding: 5px 2px;
+    text-align: center;
+}
+.list-faixas-premiacao label { display: inline-block; margin:0 5px 5px 0}

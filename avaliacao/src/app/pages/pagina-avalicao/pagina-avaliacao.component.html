@@ -1,0 +1,83 @@
+<h1 style="margin-top: 6%!important;" class="mt-5">Avaliação Técnica ITIX</h1>
+<p class="lead"> Este sistema simula sorteio da mega sena com o uso das tecnologias: Angular 7.1.0 e .Net Core 2.1. Os dados são salvos em memória.</p>
+<div class="row" style="display:block;overflow:auto;overflow-x: hidden;height: 433px;margin-top: 0%;">
+  <div class="row">
+    <div class="col-md-6">
+      <div id="grupos-left-filtro-box" class="no-padding-left">
+        <h4>Selecione os Números</h4>
+        <div class="list-dezenas-filtro" *ngFor="let numero of numeros">
+          <button (click)="addNumero(numero)" value="{{numero}}">{{numero}}</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6" *ngIf="jogos.length > 0">
+      <h4>Lista de Jogos</h4>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Nº Jogo</th>
+            <th scope="col">Data/Hora</th>
+            <th scope="col">Números</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let jogo of jogos">
+            <td>{{jogo.id}}</td>
+            <td>{{jogo.dataHoraTela}}</td>
+            <td><span style="font-size: 16px" *ngFor="let numero of jogo.numeros">&nbsp; {{numero.numero}} </span></td>
+          </tr>
+        </tbody>
+      </table>
+      <div *ngIf="premiados.length > 0">
+        <h4>Lista de Jogos Premiados</h4>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">Nº Jogo</th>
+              <th scope="col">Data/Hora</th>
+              <th scope="col">Números</th>
+              <th scope="col">Acertos</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let premiado of premiados">
+              <td>{{premiado.jogoPremiadoId}}</td>
+              <td>{{premiado.jogoPremiado.dataHoraTela}}</td>
+              <td><span style="font-size: 16px" *ngFor="let numero of premiado.jogoPremiado.numeros">&nbsp;
+                  {{numero.numero}} </span></td>
+              <td><span style="font-size: 16px">&nbsp; {{premiado.acertos}} </span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row" style="display:block;overflow:auto;overflow-x: hidden;height:80px;">
+  <div class="col-md-12">
+    <button type="button" (click)="ApostaAutomatica()" style="margin-top: 15px;" class="btn btn-primary">Aposta
+      Automática</button>
+    <button type="button" (click)="EnviarAposta(jogo)" *ngIf="jogo.numeros.length==6" style="margin-top: 15px;  margin-left: 5px "
+      class="btn btn-primary">Enviar Aposta</button>
+    <button type="button" (click)="LimparNumeros()" *ngIf="jogo.numeros.length > 0" style="margin-top: 15px;  margin-left: 5px;"
+      class="btn btn-primary">Limpar</button>
+    <button type="button" (click)="GerarSorteio()" style="margin-top: 15px;  margin-left: 5px" class="btn btn-success">Gerar
+      Sorteio</button>
+    <button type="button" (click)="LimparSorteio()" *ngIf="sorteio.length > 0" style="margin-top: 15px;  margin-left: 5px"
+      class="btn btn-success">Limpar</button>
+    <button type="button" (click)="BuscarPremiados()" style="margin-top: 15px; margin-left: 5px" *ngIf="jogos.length > 0 && sorteio.length > 0"
+      class="btn btn-success">Buscar Apostas Premiadas</button>
+  </div>
+</div>
+<div class="row" *ngIf="jogo.numeros.length > 0 || sorteio.length > 0 " style="display:block;overflow:auto;overflow-x: hidden;height:169px;">
+  <div class="col-md-12">
+    <div *ngIf="jogo.numeros.length > 0">
+      <h4> Números Selecionados: </h4>
+      <span style="font-size: 22px" *ngFor="let numero of jogo.numeros">&nbsp; {{numero.numero}} </span>
+    </div>
+    <div *ngIf="sorteio.length > 0">
+      <h4> Numeros Sorteados: </h4>
+      <span style="font-size: 22px" *ngFor="let numero of sorteio">&nbsp; {{numero.numero}} </span>
+    </div>
+  </div>
+</div>
